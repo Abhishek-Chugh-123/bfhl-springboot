@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
  * REST Controller for the /bfhl route.
  */
 @RestController
-@RequestMapping("/bfhl")
+
 @CrossOrigin(origins = "*")
 public class BfhlController {
 
@@ -28,9 +28,14 @@ public class BfhlController {
      * @param request validated request body with "data" array
      * @return 200 OK with BfhlResponse
      */
-    @PostMapping
+    @PostMapping("/bfhl")
     public ResponseEntity<BfhlResponse> processData(@Valid @RequestBody BfhlRequest request) {
         BfhlResponse response = bfhlService.processData(request);
         return ResponseEntity.ok(response);
     }
+
+    @GetMapping("/health")
+public ResponseEntity<String> healthCheck() {
+    return ResponseEntity.ok("OK");
+}
 }
