@@ -27,12 +27,12 @@ import java.util.List;
 @Service
 public class BfhlServiceImpl implements BfhlService {
 
-    // ─── CHANGE THESE BEFORE SUBMISSION ───────────────────────────────────────
-    private static final String FULL_NAME  = "john_doe";        // e.g. "rahul_sharma"
-    private static final String DOB        = "17091999";        // ddmmyyyy
-    private static final String EMAIL      = "john@xyz.com";    // your email
-    private static final String ROLL_NUMBER = "ABCD123";        // your roll number
-    // ──────────────────────────────────────────────────────────────────────────
+    
+    private static final String FULL_NAME  = "Abhishek Chugh";         
+    private static final String DOB        = "07032005";       
+    private static final String EMAIL      = "abhishek0179.be23@chitkara.edu.in";   
+    private static final String ROLL_NUMBER = "2310990179";        
+ 
 
     @Override
     public BfhlResponse processData(BfhlRequest request) {
